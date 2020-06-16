@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'pages',
     'realtors',
     'listings',
+    'accounts',
 
 
     'django.contrib.admin',
@@ -130,3 +131,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'Udemy/static')
 ]
+
+#messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+LOGOUT_REDIRECT_URL = "/"
